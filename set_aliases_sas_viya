@@ -1,0 +1,15 @@
+#!/bin/bash
+
+PROFILE_FILE="$HOME/.bashrc"
+
+echo "Agregando alias en $PROFILE_FILE..."
+
+{
+    echo ""
+    echo "# Alias para administración de SAS"
+    echo "alias sasstatus='sudo /etc/init.d/sas-viya-all-services status'"
+    echo "alias sasstart='sudo /etc/init.d/sas-viya-all-services start'"
+    echo "alias sasstop='sudo /etc/init.d/sas-viya-all-services stop'"
+} >> "$PROFILE_FILE"
+
+echo "Listo. Ejecutá ahora: source $PROFILE_FILE"
